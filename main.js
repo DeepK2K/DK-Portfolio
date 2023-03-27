@@ -40,11 +40,11 @@ function addStar() {
 }
 
 //background
-const spaceTexture = new THREE.TextureLoader().load('solarsystem.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/solarsystem.jpg');
 scene.background = spaceTexture;
 
 //Me
-const dkTexture = new THREE.TextureLoader().load('DeepAvatar.JPG')
+const dkTexture = new THREE.TextureLoader().load('/DeepAvatar.JPG')
 const dk = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: dkTexture })
@@ -52,8 +52,8 @@ const dk = new THREE.Mesh(
 scene.add(dk)
 
 //Moon
-const moonTexture = new THREE.TextureLoader().load('MoonFlat.jpg')
-const normalMoonTexture = new THREE.TextureLoader().load('PlanetTexture.jpg')
+const moonTexture = new THREE.TextureLoader().load('/MoonFlat.jpg')
+const normalMoonTexture = new THREE.TextureLoader().load('/PlanetTexture.jpg')
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -65,7 +65,7 @@ scene.add(moon)
 moon.position.setY(20)
 
 //Mercury
-const mercuryTexture = new THREE.TextureLoader().load('Mercury.jpg')
+const mercuryTexture = new THREE.TextureLoader().load('/Mercury.jpg')
 
 const mercury = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -80,7 +80,7 @@ mercury.position.setY(25)
 mercury.position.setZ(-30)
 
 //Venus
-const venusTexture = new THREE.TextureLoader().load('Venus.avif')
+const venusTexture = new THREE.TextureLoader().load('/Venus.avif')
 
 const venus = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -95,7 +95,7 @@ venus.position.setY(25)
 venus.position.setZ(-30)
 
 //earth
-const earthTexture = new THREE.TextureLoader().load('EarthFlat.jpg')
+const earthTexture = new THREE.TextureLoader().load('/EarthFlat.jpg')
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(10, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -108,7 +108,7 @@ earth.position.setY(20)
 earth.position.setZ(-10)
 
 //Mars
-const marsTexture = new THREE.TextureLoader().load('Mars.jpeg')
+const marsTexture = new THREE.TextureLoader().load('/Mars.jpeg')
 const mars = new THREE.Mesh(
   new THREE.SphereGeometry(10, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -122,7 +122,7 @@ mars.position.setX(-30)
 mars.position.setY(-5)
 mars.position.setZ(10)
 
-const jupiterTexture = new THREE.TextureLoader().load('Jupiter.jpg')
+const jupiterTexture = new THREE.TextureLoader().load('/Jupiter.jpg')
 const jupiter = new THREE.Mesh(
   new THREE.SphereGeometry(10, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -138,7 +138,7 @@ jupiter.position.setZ(20)
 
 
 //Saturn 
-const saturnTexture = new THREE.TextureLoader().load('Saturn.jpg');
+const saturnTexture = new THREE.TextureLoader().load('/Saturn.jpg');
 const saturn = new THREE.Mesh(
   new THREE.SphereGeometry(12, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -152,7 +152,7 @@ saturn.position.setY(25)
 saturn.position.setZ(-15)
 
 // Saturn ring
-const saturnRingTexture = new THREE.TextureLoader().load('SaturnTexture.jpg');
+const saturnRingTexture = new THREE.TextureLoader().load('/SaturnTexture.jpg');
 const saturnRing = new THREE.Mesh(
   new THREE.RingGeometry(15, 25, 64),
   new THREE.MeshBasicMaterial({
@@ -165,7 +165,7 @@ const saturnRing = new THREE.Mesh(
 saturnRing.rotation.x = Math.PI / 2;
 saturn.add(saturnRing);
 //Uranus
-const uranusTexture = new THREE.TextureLoader().load('Uranus.jpg');
+const uranusTexture = new THREE.TextureLoader().load('/Uranus.jpg');
 const uranus = new THREE.Mesh(
   new THREE.SphereGeometry(12, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -179,7 +179,7 @@ uranus.position.setY(40)
 uranus.position.setZ(-100)
 
 //Neptune
-const neptuneTexture = new THREE.TextureLoader().load('Neptune.jpg');
+const neptuneTexture = new THREE.TextureLoader().load('/Neptune.jpg');
 const neptune = new THREE.Mesh(
   new THREE.SphereGeometry(12, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -193,7 +193,7 @@ neptune.position.setY(50)
 neptune.position.setZ(-200)
 //Sun
 
-const sunTexture = new THREE.TextureLoader().load('Sun.jpg')
+const sunTexture = new THREE.TextureLoader().load('/Sun.jpg')
 
 
 const sun = new THREE.Mesh(
