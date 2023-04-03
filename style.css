@@ -24,7 +24,7 @@ main {
   z-index: 99;
   position: absolute;
   width: 100%;
-  margin: 0px auto;
+  margin: 0px;
   padding: 120px 0px;
   
   display: grid;
@@ -36,6 +36,18 @@ h1, h2, h3, blockquote {
   font-weight: 700;
   font-style: normal;
 }
+.about{
+  background-color: black;
+  color:white;
+  opacity: 0.8;
+}
+.skills{
+  grid-column: 7 / span 4;
+  background-color: black;
+  color:white;
+  opacity: 0.8;
+}
+
 
 canvas {
   position: fixed;
@@ -239,18 +251,23 @@ a{
     transform:scale(1.1)
   }
 .major-build-container{
-  grid-column: 2/span 3; 
+  grid-column: 2/span 9; 
   align-items:center;
   justify-content:center;
   text-align: center;
 }
+.major-build-container h1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
   .project-container{
     display:flex;
-    flex-direction: column;
     color:white;
     padding:5px;
     margin: auto;
+    justify-content: space-between;
   }
+  
   .project-title{
     display: flex;
     align-items: center;
@@ -285,22 +302,87 @@ a{
     width: 40px;
   }
   @media screen and (max-width: 768px) {
+    :root {
+      --spacing: 250px;      
+    }
+    main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0%;
+    }
+    header{
+      font-size: medium;
+    }
+    .about,.skills{
+      text-align:start;
+    }
+  
+    .resume-container{
+      display: flex;
+      width:400px;
+      max-width:max-content;
+      flex-direction:column ;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .img-contain{
+      max-width:350px;
+      height: auto;
+    }
     .certificate-container{
-    grid-column: 2/span 6; 
-    grid-template-columns: repeat(1, 1fr);
+    display: flex; 
+    flex-direction: column;
+    max-width: max-content;
+    width:auto;
+    }
+    .cert-container{
+      width:300px;
     }
     .mini-project-container{
-      grid-template-columns: repeat(1,1fr);
+      display: flex; 
+    flex-direction: column;
+    max-width: max-content;
+    }
+    .mini-project{
+      max-width: max-content;
+    }
+    .link{
+      width: 300px;
     }
     .major-build-container{
-      grid-column: 2/span 3; 
-    }
-    .contact-details,.proff-details{
       display:flex;
+      flex-direction: column; 
+    }
+    .project-container{
+      display: flex;
       flex-direction: column;
-      grid-column: 2 / span 3 ;
-      justify-content:center;
-      
-      
+    }
+    .proff-details{
+      display:flex;
+      font-size: x-small;   
+    }
+    .proff-details{
+      max-width: max-content;
+      justify-content: space-between;
+      width:80%;
+    }
+    .proff-icon{
+      margin-left:20px;
+      margin-right: 20px;
+    }
+    .contact-details{
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 3px;
+      text-align:start;
+      align-items: self-start;
+    }
+    .contact-details p{
+      text-align: left;
     }
   }

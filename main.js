@@ -208,6 +208,22 @@ sun.position.setX(0)
 sun.position.setY(30)
 sun.position.setZ(-60)
 
+function onWindowResize() {
+  // Get the dimensions of the window
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+
+  // Calculate the center of the window
+  var centerX = windowWidth / 2;
+  var centerY = windowHeight / 2;
+
+  // Set the camera position to the center of the window
+  camera.position.set(centerX, centerY, camera.position.z);
+
+  // Update the renderer size to fit the new window size
+  renderer.setSize(windowWidth, windowHeight);
+}
+
 function animate() {
   requestAnimationFrame(animate)
   ring.rotation.x += 0.01;
@@ -259,4 +275,5 @@ function moveCamera() {
   camera.position.x = t * -0.002;
   camera.position.y = t * -0.002;
 }
+window.addEventListener('resize', onWindowResize, false);
 document.body.onscroll = moveCamera
